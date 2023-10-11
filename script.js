@@ -18,23 +18,20 @@ palindrome("five|\_/|four") should return false.
 */
 
 const palindromeCheck = function (str) {
-  const mainStr = str.split(" ").join("").toLowerCase();
-  const reverseStr = str
-    .split(" ")
-    .join("")
-    .split("")
-    .reverse()
-    .join("")
-    .toLowerCase();
-  console.log(
-    `Data Test: ${mainStr.replace(
-      /[^a-zA-Z0-9\s]/g,
-      ""
-    )} or ${reverseStr.replace(/[^a-zA-Z0-9\s]/g, "")}`
-  );
   if (
-    mainStr.replace(/[^a-zA-Z0-9\s]/g, "") ===
-    reverseStr.replace(/[^a-zA-Z0-9\s]/g, "")
+    str
+      .split(" ")
+      .join("")
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9\s]/g, "") ===
+    str
+      .split(" ")
+      .join("")
+      .split("")
+      .reverse()
+      .join("")
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9\s]/g, "")
   ) {
     return true;
   } else {
@@ -42,3 +39,30 @@ const palindromeCheck = function (str) {
   }
 };
 console.log(palindromeCheck("My age is 0, 0 si ega ym."));
+
+const convertToRoman = function (num) {
+  const RomanArabic = {
+    M: "1000",
+    CM: "900",
+    D: "500",
+    CD: "400",
+    C: "100",
+    XC: "90",
+    L: "50",
+    XL: "40",
+    X: "10",
+    IX: "9",
+    V: "5",
+    IV: "4",
+    I: "1",
+  };
+  let result = "";
+  for (const roman in RomanArabic) {
+    while (num >= RomanArabic[roman]) {
+      result += roman;
+      num -= RomanArabic[roman];
+    }
+  }
+  return result;
+};
+console.log(convertToRoman(3999));
