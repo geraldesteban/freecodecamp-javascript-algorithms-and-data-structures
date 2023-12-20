@@ -1,10 +1,10 @@
 "use strict";
 const userInput = prompt(
-  `Choose project to test:\n- Palindrome Checker \n- Roman Numeral Converter \n- Caesars Cipher \n- Telephone Number Validator \n- Cash Register`
+  `Choose project to test (ENTER NUMBER):\n1 Palindrome Checker \n2 Roman Numeral Converter \n3 Caesars Cipher \n4 Telephone Number Validator \n5 Cash Register`
 );
 
 // 1st Project: Palindrome Checker
-if (userInput === "Palindrome Checker") {
+if (userInput === "1") {
   /* Data Test:
 palindrome("eye") should return a boolean.
 palindrome("eye") should return true.
@@ -46,7 +46,7 @@ palindrome("five|\_/|four") should return false.
 }
 
 // 2nd Project: Roman Numeral Converter
-if (userInput === "Roman Numeral Converter") {
+if (userInput === "2") {
   /* Data Test:
 convertToRoman(2) should return the string II.
 convertToRoman(3) should return the string III.
@@ -105,7 +105,7 @@ convertToRoman(3999) should return the string MMMCMXCIX
 }
 
 // 3rd Project: Caesars Cipher
-if (userInput === "Caesars Cipher") {
+if (userInput === "3") {
   /* Data Test:
 rot13("SERR PBQR PNZC") should decode to the string FREE CODE CAMP
 rot13("SERR CVMMN!") should decode to the string FREE PIZZA!
@@ -125,7 +125,7 @@ rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") should decode to the strin
 }
 
 // 4th Project: Telephone Number Validator
-if (userInput === "Telephone Number Validator") {
+if (userInput === "4") {
   /* Data Test:
 telephoneCheck("555-555-5555") should return a boolean.
 telephoneCheck("1 555-555-5555") should return true.
@@ -167,7 +167,7 @@ telephoneCheck("11 555-555-5555") should return false.
 }
 
 // 5th Project: Cash Register
-if (userInput === "Cash Register") {
+if (userInput === "5") {
   /* Data Test:
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return an object.
 (19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return {status: "OPEN", change: [["QUARTER", 0.5]]}.
