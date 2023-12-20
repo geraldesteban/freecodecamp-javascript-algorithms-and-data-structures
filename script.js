@@ -1,6 +1,6 @@
 "use strict";
 const userInput = prompt(
-  `Choose project to test (ENTER NUMBER):\n1 Palindrome Checker \n2 Roman Numeral Converter \n3 Caesars Cipher \n4 Telephone Number Validator \n5 Cash Register`
+  `Choose project to test (ENTER NUMBER):\n1 Palindrome Checker \n2 Roman Numeral Converter \n3 Caesars Cipher \n4 Telephone Number Validator \n5 Cash Register(Data and Result is already given, you can check it in browser console)`
 );
 
 // 1st Project: Palindrome Checker
